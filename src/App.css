@@ -14,6 +14,9 @@ body {
   font-family: "Roboto";
 }
 
+nav {
+  z-index: 2;
+}
 .logo {
   width: 5rem;
 }
@@ -30,7 +33,7 @@ nav ul li {
   color: var(--customWhite) !important;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-  border-top: 3px solid var(--customTransparent);
+  border-bottom: 3px solid var(--customTransparent);
 }
 
 .navbar-brand {
@@ -40,7 +43,7 @@ nav ul li {
 .navbar-nav > li > a.active,
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a:hover {
-  border-top: 3px solid var(--customOrange);
+  border-bottom: 3px solid var(--customOrange);
 }
 
 .header-wraper {
@@ -54,7 +57,6 @@ nav ul li {
 .main-info {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -62,8 +64,9 @@ nav ul li {
 
 .main-info h1 {
   color: var(--customOrange);
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .typed-text {
@@ -74,12 +77,22 @@ nav ul li {
 .btn-main-offer {
   border: 1px solid var(--customRed);
   text-transform: uppercase;
-  border-radius: 0;
+  border-radius: 5px;
   padding: 10px 12px 12px 12px;
   color: var(--customWhite);
   margin: 2rem;
+  text-decoration: none;
+  z-index: 2;
 }
 
 .btn-main-offer:hover {
   border: 1px solid var(--customRedHover);
+  text-decoration: none;
+  color: var(--customRedHover);
+}
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  z-index: 1;
 }
