@@ -3,7 +3,11 @@
 :root {
   --customWhite: #fff;
   --customBlue: #05aeef;
-  --customDark: rgba(255, 255, 255, 0);
+  --customTransparent: rgba(255, 255, 255, 0);
+  --customBlack: rgb(0, 0, 0);
+  --customOrange: rgb(255, 174, 81);
+  --customRed: rgb(255, 87, 81);
+  --customRedHover: rgb(202, 61, 56);
 }
 
 body {
@@ -11,7 +15,7 @@ body {
 }
 
 .logo {
-  width: 10.25rem;
+  width: 5rem;
 }
 
 nav a.nav-link {
@@ -26,15 +30,56 @@ nav ul li {
   color: var(--customWhite) !important;
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-  border-top: 3px solid var(--customDark);
+  border-top: 3px solid var(--customTransparent);
 }
 
 .navbar-brand {
-  padding: 20px !important;
+  padding: 10px !important;
 }
 
 .navbar-nav > li > a.active,
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a:hover {
-  border-top: 3px solid var(--customBlue);
+  border-top: 3px solid var(--customOrange);
+}
+
+.header-wraper {
+  position: relative;
+  background: url("./wall.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-info h1 {
+  color: var(--customOrange);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.typed-text {
+  font-size: 2rem;
+  color: var(--customWhite);
+}
+
+.btn-main-offer {
+  border: 1px solid var(--customRed);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 10px 12px 12px 12px;
+  color: var(--customWhite);
+  margin: 2rem;
+}
+
+.btn-main-offer:hover {
+  border: 1px solid var(--customRedHover);
 }
